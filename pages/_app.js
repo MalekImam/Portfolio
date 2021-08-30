@@ -1,14 +1,17 @@
-import "styles/layout.css"
+// Styles
 import "styles/globals.css"
-import Header from "@/layout/Header"
-import Footer from "@/layout/Footer"
+// Components
+import Layout from "@/layout/index"
+import Theme from "styles/styled-components/theme"
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Theme>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Theme>
     </>
   )
 }
